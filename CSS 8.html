@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex CSS Grid Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+       
+
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "sidebar content ads"
+                "footer footer footer";
+            grid-template-rows: 100px 1fr 100px;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-gap: 10px;
+            height: 100vh;
+        }
+
+       
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #5d72df;
+            padding: 10px;
+        }
+
+        .content {
+            grid-area: content;
+            display: grid;
+            grid-template-areas: 
+                "main main"
+                "extra extra";
+            grid-template-rows: 2fr 1fr;
+            grid-gap: 10px;
+            background-color: white;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .main-content {
+            grid-area: main;
+            background-color: #d15b5b;
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+        .extra-content {
+            grid-area: extra;
+            background-color: #66d99a;
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+        .ads {
+            grid-area: ads;
+            background-color: #6cbfd8;
+            padding: 10px;
+        }
+
+       
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px;
+            border-radius: 4px;
+            text-align: justify;
+        }
+        .header {
+            grid-area:header;
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 50px;
+        }
+        .footer {
+            grid-area: footer;
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-areas:
+                    "header"
+                    "content"
+                    "sidebar"
+                    "ads"
+                    "footer";
+                grid-template-rows: 100px 1fr 1fr 1fr 100px;
+                grid-template-columns: 1fr;
+            }
+
+            .content {
+                grid-template-areas: 
+                    "main"
+                    "extra";
+                grid-template-rows: 1fr 1fr;
+            }
+          
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header item">Robotics</div>
+        <div class="sidebar item">
+            <h2>Robotics</h2>
+            <p>Robotics is the interdisciplinary study and practice of the design, construction, operation, and use of robots.[1]
+            Within mechanical engineering, robotics is the design and construction of the physical structures of robots, while in computer science, robotics focuses on robotic automation algorithms. Other disciplines contributing to robotics include electrical, control, software, information, electronic, telecommunication, computer, mechatronic, and materials engineering.</p>
+        </div>
+        <div class="content item">
+            <div class="main-content">
+                <h2>Biologically-inspired flying robots</h2>
+                <p>A class of robots that are biologically inspired, but which do not attempt to mimic biology, are creations such as the Entomopter. Funded by DARPA, NASA, the United States Air Force, and the Georgia Tech Research Institute and patented by Prof. Robert C. Michelson for covert terrestrial missions as well as flight in the lower Mars atmosphere, the Entomopter flight propulsion system uses low Reynolds number wings similar to those of the hawk moth (Manduca sexta), but flaps them in a non-traditional "opposed x-wing fashion" while "blowing" the surface to enhance lift based on the Coandă effect as well as to control vehicle attitude and direction. Waste gas from the propulsion system not only facilitates the blown wing aerodynamics, but also serves to create ultrasonic emissions like that of a Bat for obstacle avoidance.</p>
+            </div>
+            <div class="extra-content">
+                <h2>Biomimetic flying robots (BFRs)</h2>
+                <p>BFRs take inspiration from flying mammals, birds, or insects. BFRs can have flapping wings, which generate the lift and thrust, or they can be propeller actuated. BFRs with flapping wings have increased stroke efficiencies, increased maneuverability, and reduced energy consumption in comparison to propeller actuated BFRs.[83] Mammal and bird inspired BFRs share similar flight characteristics and design considerations.</p>
+            </div>
+        </div>
+        <div class="ads item">
+            <h2>Walking robots</h2>
+            <p>Further information: Mantis the spider robot
+                Walking is a difficult and dynamic problem to solve. Several robots have been made which can walk reliably on two legs, however, none have yet been made which are as robust as a human. There has been much study on human-inspired walking, such as AMBER lab which was established in 2008 by the Mechanical Engineering Department at Texas A&M University.[66] Many other robots have been built that walk on more than two legs, due to these robots being significantly easier to construct.[67][68] Walking robots can be used for uneven terrains, which would provide better mobility and energy efficiency than other locomotion methods.</p>
+        </div>
+        <div class="footer item">&copy;robotics.com</div>
+    </div>
+</body>
+</html>

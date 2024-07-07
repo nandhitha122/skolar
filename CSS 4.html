@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model Demonstration</title>
+    <style>
+       
+
+        h1{
+            background-color:rgb(169, 145, 100);
+            color:white;
+            padding: 15px;
+            text-align: center;
+            font-family:'Times New Roman', Times, serif;
+        }
+
+        .box {
+            width: 200px;
+            margin-bottom: 20px;
+            background-color: #e0e0e0;
+            padding: 10px;
+        }
+
+        .content-box {
+            box-sizing: content-box;
+        }
+
+        .border-box {
+            box-sizing: border-box;
+        }
+
+        .example {
+            margin-bottom: 40px;
+        }
+
+        .example h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .padding-example .box {
+            padding: 20px;
+        }
+
+        .border-example .box {
+            border: 5px solid #333;
+        }
+
+        .margin-example .box {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Box Model Demonstration</h1>
+
+    <div class="example padding-example">
+        <h2>Padding Example (content-box)</h2>
+        <div class="box content-box">
+            <p>This box has padding of 20px.</p>
+        </div>
+    </div>
+
+    <div class="example border-example">
+        <h2>Border Example (content-box)</h2>
+        <div class="box content-box">
+            <p>This box has a border of 5px.</p>
+        </div>
+    </div>
+
+    <div class="example margin-example">
+        <h2>Margin Example (content-box)</h2>
+        <div class="box content-box">
+            <p>This box has a margin of 20px.</p>
+        </div>
+    </div>
+
+    <div class="example padding-example">
+        <h2>Padding Example (border-box)</h2>
+        <div class="box border-box">
+            <p>This box has padding of 20px.</p>
+        </div>
+    </div>
+
+    <div class="example border-example">
+        <h2>Border Example (border-box)</h2>
+        <div class="box border-box">
+            <p>This box has a border of 5px.</p>
+        </div>
+    </div>
+
+    <div class="example margin-example">
+        <h2>Margin Example (border-box)</h2>
+        <div class="box border-box">
+            <p>This box has a margin of 20px.</p>
+        </div>
+    </div>
+</body>
+</html>

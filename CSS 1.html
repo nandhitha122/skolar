@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors and Properties</title>
+    <style>
+        /* Element selector - style all paragraphs */
+p {
+    color:blue;
+    font-family:Arial, Helvetica, sans-serif;
+    
+}
+
+/* Class selector - style elements with the class "highlight" */
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* ID selector - style the unique element with id "main-heading" */
+#main-heading {
+    text-align: center;
+    color:black;
+    background-color:lawngreen;
+    padding: 20px;
+}
+
+/* Attribute selector - style links with a specific attribute */
+a[title] {
+    color: green;
+    text-decoration: underline;
+}
+
+/* Pseudo-class selector - style links when hovered */
+a:hover {
+    color: red;
+}
+
+/* Pseudo-element selector - style the first line of each paragraph */
+p::first-line {
+    font-weight: bold;
+}
+
+/* Flexbox - styling the main element */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px;
+}
+
+/* Flexbox - making sections align horizontally in the footer */
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    color:black;
+    background-color:lawngreen;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="main-heading"> IMPORTANCE OF NATURE</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#section1">contact</a></li>
+            <li><a href="#section2">help center</a></li>
+          
+        </ul>
+    </nav>
+<main>
+        <section id="section1">
+            <p class="highlight"> what is nature?</p>
+            <p>Nature is an inherent character or constitution,[1] particularly of the ecosphere or the universe as a whole.
+                 In this general sense nature refers to the laws, elements and phenomena of the physical world, including life.
+                  Although humans are part of nature, human activity or humans as a whole are often described as at times at odds, 
+                  or outright separate and even superior to nature. </p>
+        </section>
+
+        <section  id="section2">
+            <p class="highlight">How is nature created?</p>
+            <p>Nature is the world around us, with all its plants, animals, and landscapes.
+            Scientists believe that nature was created billions of years ago through a process called the Big Bang.
+             This was a massive explosion that caused the universe to begin expanding. Over time, stars and galaxies formed,
+              and planets like our Earth began to take shape.</p>
+           
+        </section >
+
+        <section id="section3">
+            <p class="highlight">Importance of nature?</p>
+        <p>The natural world is an incredible wonder that inspires us all. It underpins our economy, our society,
+             indeed our very existence. Our forests, rivers, oceans and soils provide us with the food we eat, the air we breathe,
+              the water we irrigate our crops with. We also rely on them for numerous other goods and services we depend on for our 
+              health, happiness and prosperity.  </p>
+              <p> These natural assets are often called the world's 'natural capital'. 
+                These benefits are also hugely important to the economy – from farming and forestry to leisure and tourism.
+                 If you add them all up, the total value of these benefits is phenomenal – at least US$125 trillion every year.</p>
+                 <P>Because nature is free, we often take it for granted and overexploit it. We clear forests, overfish oceans, pollute rivers and build over wetlands without taking account of the impact this will have.
+                 By not taking into account the benefits we get from nature, we create huge social and economic costs for ourselves. </P>
+                </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Webpage.com</p>
+    </footer>
+</body>
+</html>

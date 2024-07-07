@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+       
+
+        .box {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            margin: 10px;
+        }
+
+        .box-color {
+            background-color: #db3434;
+            transition: color 0.5s ease;
+        }
+
+        .box-color:hover {
+            color: #161211;
+        }
+
+        .box-bgcolor {
+            background-color:#db3434;
+            transition: background-color 0.5s ease;
+        }
+
+        .box-bgcolor:hover {
+            background-color: #e8d632;
+        }
+
+        .box-width {
+            background-color: #db3434;
+            transition: width 0.5s ease;
+        }
+
+        .box-width:hover {
+            width: 150px;
+        }
+
+        .box-height {
+            background-color: #db3434;
+            transition: height 0.5s ease;
+        }
+
+        .box-height:hover {
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box-color">Color</div>
+    <div class="box box-bgcolor">BG Color</div>
+    <div class="box box-width">Width</div>
+    <div class="box box-height">Height</div>
+</body>
+</html>

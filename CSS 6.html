@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Flexbox </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .header {
+           background-image: url('https://images.ansys.com/is/image/ansys/how-ai-and-ml-change-simulation-social?wid=764&fmt=webp&op_usm=0.9,1.0,20,0&fit=constrain,0');
+            color: white;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 20px;
+           text-transform: uppercase;
+            text-align: center;
+            padding: 10px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .footer{
+           background-image: url('https://images.ansys.com/is/image/ansys/how-ai-and-ml-change-simulation-social?wid=764&fmt=webp&op_usm=0.9,1.0,20,0&fit=constrain,0');
+            color: white;
+            text-align: center;
+            padding: 3px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    .text{
+            text-align: left;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .content {
+            display: flex;
+            flex: 1;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-around;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar {
+            background-color: #12f1e2;
+            padding: 5px;
+            margin: 5px;
+            border-radius: 4px;
+            flex: 1 1 30%;
+        }
+        .extra-content{
+            background-color: yellow;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 4px;
+            flex: 1 1 30%;
+        }
+        .main-content{
+            background-color: #eb3f3f;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 4px;
+            flex: 1 1 30%;
+        }
+
+        .main-content {
+            order: 2;
+        }
+
+        .sidebar {
+            order: 1;
+        }
+
+        .extra-content {
+            order: 3;
+        }
+
+        .nested-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .nested-item {
+            background-color: #8bce93;
+            color:black;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 4px;
+            flex: 1 1 45%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <h1>Artificial Intelligence</h1>
+        </div>
+        <div class="content">
+            <div class="sidebar">
+                <h1 class="text">what is AI?</h1>
+                <p>Artificial intelligence refers to computer systems that are capable of performing tasks traditionally associated with human
+                 intelligence — such as making predictions, identifying objects, interpreting speech and generating natural language. AI systems 
+                 learn how to do so by processing massive amounts of data and looking for patterns to model in their own decision-making.
+                  In many cases, humans will supervise an AI’s learning process, reinforcing good decisions and discouraging bad ones, but some 
+                  AI systems are designed to learn without supervision.</p>
+            </div>
+            <div class="main-content">
+                <h1 class="text">Its Importance!</h1>
+        <p> Artificial intelligence aims to provide machines with similar processing and analysis capabilities as humans, making AI a useful counterpart
+         to people in everyday life. AI is able to interpret and sort data at scale, solve complicated problems and automate various tasks simultaneously,
+          which can save time and fill in operational gaps missed by humans.</P>
+<P>AI serves as the foundation for computer learning and is used in almost every industry — from healthcare and finance to manufacturing and education — helping
+     to make data-driven decisions and carry out repetitive or computationally intensive tasks.</p>
+            </div>
+            <div class="extra-content">
+                <h1 class="text">How does AI work?</h1>
+                <p>Artificial intelligence systems work by using algorithms and data. First, a massive amount of data is collected and applied to
+                 mathematical models, or algorithms, which use the information to recognize patterns and make predictions in a process known as 
+                 training. Once algorithms have been trained, they are deployed within various applications, where they continuously learn from 
+                 and adapt to new data. This allows AI systems to perform complex tasks like image recognition, language processing and data 
+                 analysis with greater accuracy and efficiency over time.The primary approach to building AI systems is through machine learning (ML),
+                  where computers learn from large datasets by identifying patterns and relationships within the data.</p>
+            </div>
+        </div>
+        <div class="nested-container">
+            <div class="nested-item"> 1) Reactive machines</div>
+            <div class="nested-item"> 2) Limited memory</div>
+            <div class="nested-item"> 3) Theory of mind</div>
+            <div class="nested-item"> 4) Self-aware</div>
+        </div>
+        <div class="footer">
+            <p>&COPY;AI.com</p>
+        </div>
+    </div>
+</body>
+</html>

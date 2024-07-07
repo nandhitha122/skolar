@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        header,footer{
+            background-color: #ba7f7f;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+       
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            flex: 1;
+        }
+
+        .sidebar, .content, .extra {
+            background-color: #d1bdbd;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .extra {
+            display: none;
+        }
+
+        @media (min-width: 600px) {
+            .container {
+                padding: 40px;
+            }
+
+            header, footer {
+                font-size: 1.5rem;
+            }
+
+            .main-content {
+                flex-direction: row;
+            }
+
+            .sidebar {
+                flex: 1;
+            }
+
+            .content {
+                flex: 2;
+            }
+
+            .extra {
+                display: block;
+                flex: 1;
+            }
+        }
+
+        @media (min-width: 900px) {
+            header, footer {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 60px;
+            }
+
+            .sidebar, .content, .extra {
+                padding: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Responsive Webpage</h1>
+        </header>
+        <div class="main-content">
+            <div class="sidebar">Responsive Web design is the approach that suggests that design and development should respond to the user’s behavior and environment based on screen size, platform and orientation.
+
+                The practice consists of a mix of flexible grids and layouts, images and an intelligent use of CSS media queries. As the user switches from their laptop to iPad, the website should automatically switch to accommodate for resolution, image size and scripting abilities. One may also have to consider the settings on their devices; if they have a VPN for iOS on their iPad, for example, the website should not block the user’s access to the page.</div>
+            <div class="content">MBefore responsive web design became the standard approach for making websites work across different device types, web developers used to talk about mobile web design, mobile web development, or sometimes, mobile-friendly design. These are basically the same as responsive web design — the goals are to make sure that websites work well across devices with different physical attributes (screen size, resolution) in terms of layout, content (text and media), and performance.
+                HTML is fundamentally responsive, or fluid. If you create a web page containing only HTML, with no CSS, and resize the window, the browser will automatically reflow the text to fit the viewport.
+
+While the default responsive behavior may sound like no solution is needed, long lines of text displayed full screen on a wide monitor can be difficult to read. If wide screen line length is reduced with CSS, such as by creating columns or adding significant padding, the site may look squashed for the user who narrows their browser window or opens the site on a mobile device.
+            </div>
+            <div class="extra">Creating a non-resizable web page by setting a fixed width doesn't work either; that leads to scroll bars on narrow devices and too much empty space on wide screens.
+
+                Responsive web design, or RWD, is a design approach that addresses the range of devices and device sizes, enabling automatic adaption to the screen, whether the content is viewed on a tablet, phone, television, or watch.
+                
+                Responsive web design isn't a separate technology — it is an approach. It is a term used to describe a set of best practices used to create a layout that can respond to any device being used to view the content.</div>
+        </div>
+        <footer>
+            <p>&copy;web page.com</p>
+        </footer>
+    </div>
+</body>
+</html>

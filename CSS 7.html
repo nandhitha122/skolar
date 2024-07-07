@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout</title>
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 10px;
+    height: 100vh;
+}
+
+.header {
+    grid-column: 1 / 3;
+    background-color: #e25151;
+    color: white;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+.sidebar {
+    background-color: #e5ebdb;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.content {
+    background-color: #babadd;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    overflow-y: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.footer {
+    grid-column: 1 / 3;
+    background-color: #e25151;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item {
+    text-align: justify;
+    padding: 20px;
+    border-radius: 4px;
+}
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header item">Internet Of Things</div>
+        <div class="sidebar item">
+            <h2>What are IoT devices?</h2>
+            <p>Internet of things (IoT) devices are nonstandard computing hardware -- such as sensors, actuators or appliances 
+             that connect wirelessly to a network and can transmit data.
+             IoT extends internet connectivity beyond typical computing devices -- such as desktops, laptops,
+          smartphones and tablets -- to any range of traditionally dumb or non-internet-enabled physical devices and everyday objects.
+           Embedded with technology, these devices can communicate and interact over the internet, and can be remotely monitored and controlled.
+        IoT devices have both industrial and consumer uses and are typically integrated into other tools such as mobile devices, industrial equipment
+             and medical devices. Over a broad range, they can also be used in smart cities. They're then used to send data or interact with other IoT devices over
+              a network.</p>
+        </div>
+        <div class="content item">
+                <h2>How do IoT devices work?</h2>
+            <p>  IoT devices vary in terms of functionality, but also have some similarities in how they work. First, IoT devices are physical objects designed to interact with the real world in some way. The device might be a sensor on an assembly line or an intelligent security camera. In either case, the device senses what's happening in its surrounding environment.</p>
+
+               <p>The devices themselves typically include an integrated CPU, firmware and a network adapter. In most cases, IoT devices connect to a Dynamic Host Configuration Protocol server and acquire an IP address that it can use to function on the network. Some IoT devices are directly accessible over the public internet, but most are designed to operate exclusively on private networks.</p>
+                
+               <p> Although not an absolute requirement, many IoT devices are configured and managed through a software application. Some devices, however, have integrated web servers, eliminating the need for an external application.</p>
+       
+               <p>  IoT devices vary in terms of functionality, but also have some similarities in how they work. First, IoT devices are physical objects designed to interact with the real world in some way. The device might be a sensor on an assembly line or an intelligent security camera. In either case, the device senses what's happening in its surrounding environment.</p>
+
+               <p>The devices themselves typically include an integrated CPU, firmware and a network adapter. In most cases, IoT devices connect to a Dynamic Host Configuration Protocol server and acquire an IP address that it can use to function on the network. Some IoT devices are directly accessible over the public internet, but most are designed to operate exclusively on private networks.</p>
+                
+               <p> Although not an absolute requirement, many IoT devices are configured and managed through a software application. Some devices, however, have integrated web servers, eliminating the need for an external application.</p>
+             </div>
+        <div class="footer item">&copy;technology.com</div>
+    </div>
+</body>
+</html>

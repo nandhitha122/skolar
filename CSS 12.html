@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-Index Demonstration</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.container {
+    position: relative;
+    height: 550px;
+    margin: 15px auto;
+    width: 80%;
+    border: 1px solid #262222;
+}
+
+.box {
+    position:absolute;
+    width: 150px;
+    height: 150px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+}
+
+.box1 {
+    background: #ff6347;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+}
+
+.box2 {
+    background: #4682b4;
+    top: 100px;
+    left: 100px;
+    z-index: 2;
+}
+
+.box3 {
+    background: #32cd32;
+    top: 150px;
+    left: 150px;
+    z-index: 3;
+}
+
+.box4 {
+    background: #ffa500;
+    top: 200px;
+    left: 200px;
+    z-index: 4;
+}
+
+.box:hover {
+    transform: scale(1.2);
+    z-index: 5;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Z-Index Demonstration with Overlapping Elements</h1>
+    </header>
+    
+    <div class="container">
+        <div class="box box1"> box 1</div>
+        <div class="box box2">Box 2</div>
+        <div class="box box3">Box 3</div>
+        <div class="box box4">Box 4</div>
+    </div>
+
+    <footer>
+        <p>Experiment with different z-index values to control the stacking order of elements.</p>
+    </footer>
+</body>
+</html>
